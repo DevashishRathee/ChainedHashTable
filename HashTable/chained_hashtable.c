@@ -6,7 +6,7 @@
 struct hash_table *create_table(size_t size){
     struct hash_table *htable = (struct hash_table *)malloc(sizeof(struct hash_table));
     htable->table = (struct linked_list **)malloc(size * sizeof(struct linked_list *));
-    for(size_t i=0;i<size;i++){
+    for(size_t i=0;i<size;++i){
         htable->table[i] = create_list();
     }
     htable->size = size;
